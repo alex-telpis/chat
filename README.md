@@ -33,7 +33,7 @@ app := chat.NewClient("JohnDoe")
 app.Run("127.0.0.1:4442")
 ```
 
-### Lanucher Examples:
+### Launcher Examples:
 Server
 ```go
 package main
