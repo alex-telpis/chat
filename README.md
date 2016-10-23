@@ -1,5 +1,5 @@
 # Chat
-Server-Client app on Go
+Scalable server-client chat on Go
 
 ### Installation:
 ```sh
@@ -18,7 +18,7 @@ For cluster mode: add another server instance:
 - initiate with own addr as first param, it will be used to introduce the instance to cluster
 - pass address of any already running instance as 2nd param. This server will "guide" just created instance through the cluster by sharing addresses of other members
 - run instance on port that was mentioned in ownAddr
-...
+- ...
 - add as many instances as needed
 ```go
 ownAddr := "127.0.0.1:4442"
@@ -27,7 +27,7 @@ app := chat.NewServer(ownAddr, guideAddr)
 app.Run("4442")
 ```
 
-Prepare client by passing user name. Run it on server address
+Prepare client by passing user name. Run it on any server address
 ```go
 app := chat.NewClient("JohnDoe")
 app.Run("127.0.0.1:4442")
